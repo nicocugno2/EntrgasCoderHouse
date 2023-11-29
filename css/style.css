@@ -1,0 +1,428 @@
+
+
+/*Fuente que va a ultilizar la pagina*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto:wght@100&display=swap');
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+
+
+
+/* paleta de colores*/
+
+:root {
+  --bg-color: #0b061f;
+  --text-color: #fdfdfd;
+  --main-color: #754ef9;
+  --white-color: #fdfdfd;
+  --shadow-color: rgba(0,0,0, .7)
+}
+
+/*GENERALES*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', 'Helvetica';
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+/*HEADER*/
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+
+/*LOGO*/
+.logo{
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: default;
+  margin-right: auto ;
+}
+
+/*BARRA NAVEGACION*/
+.navbar a{
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-right: 3.5rem;
+}
+
+.navbar a:hover{
+  color: var(--bg-color);
+}
+
+
+
+/*SECCION PRESENTACION*/
+section{
+  min-height: 100vh;
+  padding: 10rem 7% 2rem;
+}
+
+
+.inicio{
+  display: flex;
+  align-items: center;
+}
+
+.contenido-inicio{
+  max-width: 44rem;
+}
+
+/*TEXTO PRESENTACION*/
+.contenido-inicio h3{
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: .8;
+}
+
+
+.contenido-inicio h1{
+  font-size: 6em;
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+
+.contenido-inicio p{
+  font-size: 1.6rem;
+  
+}
+
+/*NOMBRE CON COLOR*/
+.contenido-inicio h1 span{
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+
+
+.contenido-inicio .redes-sociales a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 .2rem .5rem var(--shadow-color);
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 2.5rem 1.5rem 3rem 0;
+  transition: .5s ease;
+  
+}
+
+/*LOGOS REDES*/
+
+.contenido-inicio .redes-sociales a:hover{
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
+/*BOTON CURRICULUM*/
+
+.boton{
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border-radius: .6rem;
+  box-shadow: 0 .2rem .5rem var(--shadow-color);
+  font-size: 1.6rem;
+  color: var(--white-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  border: .2rem solid transparent;
+  transition: .5 ease;
+}
+
+.boton:hover{
+  background: transparent;
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+
+.inicio .imagen-animada {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1080px  ;
+  height: 1080px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.inicio .imagen-animada .contenedor-img-animada{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1080px;
+  height: 1080px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio .contenedor-img-animada .profesion{
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--main-color);
+  transform: rotate(calc(360deg / 4 * var(--i)));
+  transform-origin: 540px;
+  background: var(--bg-color);
+  padding: 13px 0;
+}
+
+.inicio .contenedor-img-animada .profesion:nth-child(1) i{
+  margin-right: 15px;
+}
+
+.inicio .contenedor-img-animada .profesion:nth-child(2),
+.inicio .contenedor-img-animada .profesion:nth-child(4) {
+  padding-bottom: 20px;
+}
+
+
+.inicio .profesion i{
+  font-size: 3.8rem;
+}
+
+.inicio .profesion h3{
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+
+
+.inicio .contenedor-img-animada .circulo{
+  width: 900px;
+  height: 900px;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+}
+
+
+.inicio .contenedor-img-animada .violeta{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 540px solid var(--main-color);
+  border-bottom: 540px solid var(--main-color);
+  border-right: 540px solid var(--main-color);
+  border-left: 540px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*SECCION DE SOBRE MI*/
+
+#quien-soy {
+  max-width: 1000px;
+  margin: auto;
+  padding: 100px 15px;
+  color: #111135;
+  display: flex;
+
+}
+/*foto*/
+#quien-soy .fotoMia {
+
+  display: block;
+  height: auto;
+}
+
+#quien-soy .fotoMia img {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--main-color);
+
+}
+
+#quien-soy  .quien-soy  {
+  margin: 0 40px;
+}
+#quien-soy  .quien-soy .titulo {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--text-color);
+  text-decoration-thickness: 5px;
+}
+
+#quien-soy .quien-soy h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+#quien-soy .quien-soy h2 span {
+  color: var(--main-color);
+}
+#quien-soy .quien-soy h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#quien-soy .quien-soy p {
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+
+
+/*QUIEN SOY*/
+
+.tarjetas h2{
+  margin-top: 5rem;
+  text-align: center;
+}
+.tarjetas h2 span{
+  color: var(--main-color);
+  text-align: center;
+
+}
+
+.tarjetas-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tarjetas-contenedor .tarjetas-box{
+  flex: 1 1 30rem;
+  background: var(--main-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2re solid;
+  
+}
+
+.tarjetas-contenedor .tarjetas-box h3, p, a{
+  color: #F5E8C7;
+}
+
+.tarjetas-box i{
+  font-size: 7rem;
+  color: #818FB4
+}
+
+.tarjetas-box h3{
+  font-size: 2.6rem;
+}
+
+
+
+
+
+
+
+
+/*PAGINA CONTACTO*/
+
+
+#contacto {
+  display: flex;
+  justify-content: center; /* Para centrar los botones horizontalmente */
+}
+
+#contacto a{
+  margin: 0 10px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: .5s;
+  background: rgba(0,0,0,0);
+  color: var(--color);
+  font-size: 2.5rem;
+  -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.4));
+
+}
+
+#contacto a:hover{
+  background: var(--color);
+  color: #050801;
+  box-shadow: 0 0 5px var(--color),
+  0 0 25px var(--color),
+  0 0 50px var(--color),
+  0 0 200px var(--color);
+}
+
+
+
+
+/*FOOTER*/
+
+footer {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: inline-block;
+  margin: 5px;
+  font-size: 26px;
+}
