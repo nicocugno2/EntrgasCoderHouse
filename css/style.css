@@ -42,7 +42,6 @@ body{
 /*HEADER*/
 
 .header{
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -51,36 +50,50 @@ body{
   display: flex;
   align-items: center;
   z-index: 100;
+  position: fixed;
+  transition: .5s;
 }
+
+.header.sticky {
+  background: var(--bg-color);
+  box-shadow: 0 .1rem .1rem var(--shadow-color);
+}
+
 
 
 /*LOGO*/
 .logo{
-  font-size: 2.5rem;
+  font-size: 5rem;
   color: var(--main-color);
   font-weight: 600;
-  cursor: default;
+  cursor: pointer;
   margin-right: auto ;
 }
 
 /*BARRA NAVEGACION*/
 .navbar a{
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 500;
   margin-right: 3.5rem;
+  text-decoration: none;
 }
 
 .navbar a:hover{
   color: var(--bg-color);
 }
 
+.header.sticky .navbar a:hover{
+  color: var(--main-color);
+  opacity: .7;
+}
 
 
 /*SECCION PRESENTACION*/
 section{
   min-height: 100vh;
-  padding: 10rem 7% 2rem;
+  padding: 0rem 7% 2rem;
+  margin-bottom: 30rem;
 }
 
 
@@ -89,38 +102,42 @@ section{
   align-items: center;
 }
 
-.contenido-inicio{
-  max-width: 44rem;
+.inicio .contenido-inicio{
+  max-width: 52rem;
 }
 
 /*TEXTO PRESENTACION*/
 .contenido-inicio h3{
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: .8;
 }
 
 
 .contenido-inicio h1{
-  font-size: 6em;
-  font-weight: 700;
-  margin-bottom: .3rem;
+  font-size: 6rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
 }
 
 .contenido-inicio p{
-  font-size: 1.6rem;
+  font-size: 2rem;
   
 }
 
 /*NOMBRE CON COLOR*/
-.contenido-inicio h1 span{
-  font-size: 4rem;
+.span-title{
+  font-size: 5rem;
   font-weight: 700;
   color: var(--main-color);
 }
 
+.span-verde{
+  color: turquoise;
+  font-size: 2rem;
+}
 
-
+/*REDES SOCIALES*/
 .contenido-inicio .redes-sociales a{
   display: inline-flex;
   justify-content: center;
@@ -135,7 +152,7 @@ section{
   color: var(--main-color);
   margin: 2.5rem 1.5rem 3rem 0;
   transition: .5s ease;
-  
+  text-decoration: none;
 }
 
 /*LOGOS REDES*/
@@ -143,22 +160,24 @@ section{
 .contenido-inicio .redes-sociales a:hover{
   background: var(--main-color);
   color: var(--white-color);
+  text-decoration: none;
 }
 
 /*BOTON CURRICULUM*/
 
 .boton{
   display: inline-block;
-  padding: 1.2rem 2.8rem;
+  padding: 1.5rem 8.2rem;
   background: var(--main-color);
   border-radius: .6rem;
   box-shadow: 0 .2rem .5rem var(--shadow-color);
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--white-color);
   letter-spacing: .1rem;
   font-weight: 600;
   border: .2rem solid transparent;
   transition: .5 ease;
+  text-decoration: none;
 }
 
 .boton:hover{
@@ -168,13 +187,15 @@ section{
 }
 
 
+/*CONTENEDOR DE PARTE ANIMADA*/
+
 .inicio .imagen-animada {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 1080px  ;
-  height: 1080px;
+  width: 100%  ;
+  height: 100%;
   overflow: hidden;
   pointer-events: none;
 }
@@ -183,8 +204,8 @@ section{
   position: absolute;
   top: 0;
   right: 0;
-  width: 1080px;
-  height: 1080px;
+  width: 1000px;
+  height: 1000px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -199,9 +220,9 @@ section{
   flex-direction: column;
   color: var(--main-color);
   transform: rotate(calc(360deg / 4 * var(--i)));
-  transform-origin: 540px;
+  transform-origin: 600px;
   background: var(--bg-color);
-  padding: 13px 0;
+  padding: 50px 0;
 }
 
 .inicio .contenedor-img-animada .profesion:nth-child(1) i{
@@ -215,11 +236,11 @@ section{
 
 
 .inicio .profesion i{
-  font-size: 3.8rem;
+  font-size: 4rem;
 }
 
 .inicio .profesion h3{
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 600;
 }
@@ -227,8 +248,8 @@ section{
 
 
 .inicio .contenedor-img-animada .circulo{
-  width: 900px;
-  height: 900px;
+  width: 1000px;
+  height: 1000px;
   border: 3px solid var(--main-color);
   border-radius: 50%;
 }
@@ -240,18 +261,21 @@ section{
   right: 0;
   width: 0;
   height: 0;
-  border-top: 540px solid var(--main-color);
-  border-bottom: 540px solid var(--main-color);
-  border-right: 540px solid var(--main-color);
-  border-left: 540px solid transparent;
+  border-top: 580px solid var(--main-color);
+  border-bottom: 580px solid var(--main-color);
+  border-right: 580px solid var(--main-color);
+  border-left: 580px solid transparent;
 }
 
-
-
-
-
-
-
+/*IMAGEN NICO*/
+.home-img img{
+  position: relative;
+  top: 35px;
+  right: 0px;
+  left: 0px;
+  width: 120%;
+  pointer-events: none;
+}
 
 
 
@@ -259,7 +283,7 @@ section{
 /*SECCION DE SOBRE MI*/
 
 #quien-soy {
-  max-width: 1000px;
+  max-width: 1600px;
   margin: auto;
   padding: 100px 15px;
   color: #111135;
@@ -271,6 +295,9 @@ section{
 
   display: block;
   height: auto;
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto;
+  
 }
 
 #quien-soy .fotoMia img {
@@ -282,10 +309,10 @@ section{
 }
 
 #quien-soy  .quien-soy  {
-  margin: 0 40px;
+  margin: 0 60px;
 }
 #quien-soy  .quien-soy .titulo {
-  font-size: 22px;
+  font-size: 40px;
   text-transform: uppercase;
   color: var(--text-color);
   text-decoration: underline;
@@ -294,9 +321,9 @@ section{
 }
 
 #quien-soy .quien-soy h2 {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 25px 0;
   letter-spacing: 2px;
   color: var(--text-color);
 }
@@ -305,15 +332,16 @@ section{
   color: var(--main-color);
 }
 #quien-soy .quien-soy h3 {
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  color: var(--main-color);
 }
 
 #quien-soy .quien-soy p {
-  font-size: 14px;
+  font-size: 25px;
   line-height: 25px;
   color: var(--text-color);
   margin-bottom: 12px;
@@ -321,50 +349,72 @@ section{
 
 
 
-/*QUIEN SOY*/
+/*SECTION DE SERVICIOS*/
 
-.tarjetas h2{
-  margin-top: 5rem;
+.titulo-servicio{
+  font-size: 40px;
+  font-weight: bold;
+  margin: 25px 0;
+  letter-spacing: 2px;
+  color: var(--text-color);
   text-align: center;
+
 }
-.tarjetas h2 span{
+
+.titulo-servicio span {
   color: var(--main-color);
-  text-align: center;
-
 }
 
-.tarjetas-contenedor {
+.servicios-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   gap: 2rem;
-}
 
-.tarjetas-contenedor .tarjetas-box{
-  flex: 1 1 30rem;
-  background: var(--main-color);
-  padding: 3rem 2rem 4rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: .2re solid;
   
 }
 
-.tarjetas-contenedor .tarjetas-box h3, p, a{
-  color: #F5E8C7;
+.servicios-container .servicios-box{
+  flex: 1 1 30px;
+  background-color: var(--bg-color);
+  padding: 3rem 2rem 4rem;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 0 .1rem .5rem var(--shadow-color);
+  border-top: .6rem solid var(--main-color);
+  border-bottom: .6rem solid var(--main-color);
+  
 }
 
-.tarjetas-box i{
+.servicios-container .servicios-box:hover{
+  box-shadow: 0 .1rem 2rem var(--shadow-color);
+  transform: scale(1.02);
+}
+
+
+.servicios-box i{
+  align-items: center;
   font-size: 7rem;
-  color: #818FB4
+  color: var(--main-color);
 }
 
-.tarjetas-box h3{
+.servicios-box h3 {
   font-size: 2.6rem;
+  transition: .5s ease;
+  pointer-events: none;
+}
+
+.servicios-box:hover h3{
+  color: var(--main-color);
 }
 
 
+.servicios-box p{
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+  pointer-events: none;
+}
 
 
 

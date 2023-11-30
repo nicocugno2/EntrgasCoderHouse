@@ -8,6 +8,7 @@
   <meta name="viewport" content="width= , initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/logo.ico">
   <title>NC</title>
@@ -34,8 +35,8 @@
         <section class="inicio" id="inicio">
           <div class="contenido-inicio">
             <h3>Bienvenidos</h3>
-            <h1>Soy <span>Nicolás Cugno</span>, Programador</h1>
-            <p>Estudiante de Ingenieria en Sistemas</p>
+            <h1>Soy <span class="span-title">Nicolás Cugno</span>, Programador<span class="span-verde">.py</span></h1>
+            <p> <span class="span-verde"> print("</span>Estudiante de Ingenieria en Sistemas <span class="span-verde">")</span></p>
               
             <div class="redes-sociales">
               <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -64,46 +65,22 @@
               </div>
               <div class="profesion" style="--i:3;">
                 <i class="fa-solid fa-superscript"></i>
-                <h3>Software Engineering</h3>
+                <h3>Growth Marketing</h3>
               </div>
 
               <div class="circulo"></div>
               <div class="violeta"></div>
             </div>
+            <div class="overlay"></div>
+          </div>
+
+          <div class="home-img">
+            <img src="img/me.png.png" alt="Foto Nicolas Cugno">
           </div>
 
         </section>
 
-
-
-
-
-
-
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--Parte de Sobre Mi-->
+    <!--Parte de Sobre Mi-->
       <section id="quien-soy">
         <div class="fotoMia">
           <img src="img/me.jpg" alt="Foto del Programador">
@@ -116,42 +93,39 @@
             0 Nisi iste, veritatis minus laborum nostrum eligendi, 
             Blanditiis voluptate inventore officiis cupiditate quisquam? 
             Fugit, laboriosam!</p>
-
-        
         </div>
       </section>
 
-      <section class="tarjetas" id="tarjetas">
-        <h2 class="Quien Soy">Quien Soy <span>?</span></h2>
 
-        <div class="tarjetas-contenedor">
-          <div class="tarjetas-box">
+      <section class="servicios" id="servicios">
+        <h2 class="titulo-servicio">Mis <span>Servicios</span></h2>
+
+        <div class="servicios-container">
+          <div class="servicios-box">
+            <i class="fa-solid fa-hat-cowboy"></i>
+            <h3>Pentesting</h3>
+            <p>Asegure su empresa con Pentesting de vanguardia. Más que detectar vulnerabilidades, nos sumergimos en su seguridad, fortaleciendo sus defensas analisando detectando y reparando vulnerabilidades. Con nuestra experiencia avanzada, no solo protege, sino que se asocia estratégicamente para salvaguardar sus activos digitales.
+</p>
+            <a href="pages/Contacto.html" class="boton">Contactame</a>
+          </div>
+
+          <div class="servicios-box">
             <i class="fa-solid fa-code"></i>
-            <h3>Que Trabajos he Hecho?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia, dolorem, nesciunt ad modi omnis animi consequuntur odit facere voluptates debitis consequatur ut culpa in libero recusandae quis iste? Delectus!</p>
-            <a href="./pages/proyectos.html" class="boton">Proyectos</a>
+            <h3>Programacion</h3>
+            <p>Transforme su visión en soluciones tecnológicas de gran impacto. No solo proponemos líneas de código, sino soluciones personalizadas que impulsan su crecimiento de forma segura y escalable. Únase a nosotros para una colaboración que convierte desafíos en oportunidades tecnológicas.</p>
+            <a href="pages/Contacto.html" class="boton">Contactame</a>
           </div>
-
-          <div class="tarjetas-box">
-            <i class="fa-solid fa-code-branch"></i>
-            <h3>Que Ofrezco?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia, dolorem, nesciunt ad modi omnis animi consequuntur odit facere voluptates debitis consequatur ut culpa in libero recusandae quis iste? Delectus!</p>
-            <a href="./pages/Servicios.html" class="boton">Servicios</a>
-          </div>
-
-          <div class="tarjetas-box">
-            <i class="fa-brands fa-python"></i>
-            <h3>Que Tecnologias Se?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia, dolorem, nesciunt ad modi omnis animi consequuntur odit facere voluptates debitis consequatur ut culpa in libero recusandae quis iste? Delectus!</p>
-            <a href="./pages/skills.html" class="boton">Tecnologias</a>
+          
+          <div class="servicios-box">
+            <i class="fa-solid fa-comments-dollar"></i>
+            <h3>Growth Marketing</h3>
+            <p>En el mundo crecimiento empresarial, tener un Growth Manager estratégico es crucial. Ofrecemos experiencia y un enfoque personalizado. Colaboramos estrechamente para identificar oportunidades de crecimiento y trazar un camino hacia el éxito. Elija la conexión que impulsa su empresa hacia nuevos horizontes.</p>
+            <a href="pages/Contacto.html" class="boton">Contactame</a>
           </div>
         </div>
 
-
-
-
-
       </section>
+
 
       <!--FOOTER-->
       <footer>
@@ -160,5 +134,8 @@
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
       </footer>
-</body>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="js/script.js"></script>
+    </body>
 </html>
