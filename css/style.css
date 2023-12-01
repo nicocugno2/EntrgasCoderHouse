@@ -237,11 +237,12 @@ section{
 
 .inicio .profesion i{
   font-size: 4rem;
+
 }
 
 .inicio .profesion h3{
   font-size: 3rem;
-  line-height: 1;
+  line-height: 2;
   font-weight: 600;
 }
 
@@ -257,8 +258,8 @@ section{
 
 .inicio .contenedor-img-animada .violeta{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   width: 0;
   height: 0;
   border-top: 580px solid var(--main-color);
@@ -270,10 +271,10 @@ section{
 /*IMAGEN NICO*/
 .home-img img{
   position: relative;
-  top: 35px;
+  top: 58px;
   right: 0px;
-  left: 0px;
-  width: 120%;
+  left: 170px;
+  width: 110%;
   pointer-events: none;
 }
 
@@ -416,6 +417,222 @@ section{
   pointer-events: none;
 }
 
+/*PAGINA PROYECTOS*/
+
+.portafolio{
+  padding-bottom: 10rem;
+}
+
+.portafolio h1{
+  margin-bottom: 4rem;
+}
+
+.portafolio .portafolio-contenedor{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.portafolio-contenedor .portafolio-box{
+  position: relative;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA SKILLS*/
+
+.header-pags{
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: .5s;
+}
+
+.navbar-pags a{
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-right: 3.5rem;
+  text-decoration: none;
+  
+  
+}
+
+.navbar-pags a:hover{
+  color: var(--main-color);
+}
+
+
+
+
+
+.contenedor-skills{
+  padding-top: 130px;
+  padding-bottom: 400px;
+}
+
+.contenedor-skills h1{
+  text-align: center;
+  
+}
+
+.skill-head:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: var(--bg-color);
+}
+
+.skill-contenedor{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 400px;
+  font-size: 1.2rem;
+}
+
+
+
+.skill-box{
+  padding: 1rem;
+  color: #ddd;
+  cursor: pointer;
+}
+
+
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+  width: 35px;
+}
+
+.skill-box:hover .img-skills {
+  transform: translateY(-10px);
+}
+
+.skill-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.skill-title:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #2ecc71;
+  transition: .5s;
+
+}
+
+.skill-title:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background-color: #2ecc71;
+  border-radius: 0 2px 2px 0;
+  transition: .5s;
+}
+
+
+.skill-icon{
+  width: 60px;
+}
+
+.img-skills {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.img-skills:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100,100, 100, 0.5);
+  border-radius: 45px 0 0 45px;
+
+}
+
+
+.skill-title h3{
+  color: var(--text-color);
+  margin-top: 0.5erm;
+}
+
+
+.skill-icon{
+  width: 50px;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -469,10 +686,212 @@ footer {
   padding: 30px 0;
 }
 
-footer a {
+footer a{
   text-decoration: none;
   color: var(--text-color);
   display: inline-block;
   margin: 5px;
   font-size: 26px;
+}
+
+footer .gif {
+  display: inline-block;
+  align-items: rigth;
+  width: 2%
+  
+  ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BREAKPOINTS*/
+
+
+@media (max-width:1620px) {
+  html{
+    font-size: 55%;
+  }
+  .inicio .contenedor-img-animada{
+    height: 85.8rem;
+  }
+  .inicio .contenedor-img-animada .profesion{
+    right: -12rem;
+  height: 85.8rem;
+  }
+  .inicio .contenedor-img-animada .overlay{
+    right: -9rem;
+  }
+
+}
+
+@media (max-width:1500px) {
+  header{
+    padding: 2rem 3%;
+  }
+  section{
+    padding: 10rem 3% 2rem;
+  }
+  .inicio .contenedor-img-animada .profesion{
+    right: -22rem;
+    
+  }
+  .inicio .contenedor-img-animada .overlay{
+    right: -15rem;
+  }
+
+}
+
+@media (max-width:1300px) {
+  .inicio .contenido-inicio{
+    max-width: 50rem;;
+  }
+  .inicio .contenedor-img-animada .profesion{
+    right: -45rem;
+  }
+  .inicio .contenedor-img-animada .violeta{
+    right: -39.5rem;
+    background: transparent;
+    
+  }
+  .inicio .contenedor-img-animada .overlay{
+    right: -15rem;
+    background: transparent;
+  }
+  
+  .home-img{
+    display: none;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .header {
+      padding: 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    align-items: center;
+  }
+  .navbar a {
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+  }
+
+  .contenido-inicio{
+    align-items: center;
+    text-align: center;
+  }
+  .contenido-inicio h3 {
+      font-size: 3rem;
+  }
+
+  .contenido-inicio h1 {
+      font-size: 4rem;
+  }
+
+  .contenido-inicio p {
+      font-size: 1.8rem;
+
+  }
+
+  .span-title {
+      font-size: 3rem;
+  }
+
+  .span-verde {
+      font-size: 1.5rem;
+  }
+
+  .contenido-inicio .redes-sociales a {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      margin: 1rem 1rem 2rem 0;
+  }
+
+  .boton {
+      padding: 1rem 4rem;
+      font-size: 1.8rem;
+  }
+
+  .inicio .imagen-animada {
+      display: none; /* O ajusta según tus necesidades para pantallas más pequeñas */
+  }
+
+  .home-img img {
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1600px) {
+  
+  .skill-contenedor{
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 50px;
+  }
+}
+
+@media (max-width:1200px) {
+  .skill-contenedor{
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
+
+@media (max-width:980px) {
+  .skill-contenedor{ 
+    grid-template-columns: 1fr;
+  }
+  .skill-box{
+    margin-top: 10%;
+    font-size: 2rem;
+  }
+}
+@media (max-width:390px) {
+  .skill-contenedor{ 
+    grid-template-columns: 1fr;
+  }
+  .skill-box{
+    margin-top: 15%;
+    font-size: 2rem;
+  
+  }
 }
