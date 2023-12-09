@@ -7,27 +7,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo.ico">
     <title>Contacto</title>
 </head>
 <body>
         <!--Menu de Navegacion-->
-        <header class="header">
-            <a href="#" class="logo">NC</a>
-            <nav class="navbar">
-                <a href="../index.html">Inicio</a>
-                <a href="#">Proyectos</a>
-                <a href="../pages/Servicios.html">Servicios</a>
-                <a href="../pages/skills.html">Mis Skills</a>
-                <a href="../pages/Contacto.html">Contacto</a>
-            </nav>
-
-        </header>
+    <header class="header">
+        <a href="#" class="logo">NC</a>
+        <nav class="navbar">
+            <a href="../index.html">Inicio</a>
+            <a href="#">Proyectos</a>
+            <a href="../pages/Servicios.html">Servicios</a>
+            <a href="../pages/skills.html">Mis Skills</a>
+            <a href="../pages/Contacto.html">Contacto</a>
+        </nav>
+        <div class="fa-solid fa-bars" id="menu"></div>
+    </header>
         
+    <section  class="formu"id="formu">
+        <h1 class="span-title">Contactame<span class="span-verde">!</span></h1>
+    
+        <form action="#">
+            <div class="input-box">
+                <input type="text"  placeholder="Nombre y Apellido">
+                <input type="email"  placeholder="Gmail">
+            </div>
+            <div class="input-box">
+                <input type="number"  placeholder="Telefono">
+                <input type="text"  placeholder="Motivo del Mail">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Deja Tu Mensaje"></textarea>
+            <input type="submit" value="Enviar" class="boton">
+    </form>
+        </section>
+    
         
     <section id="contacto">
-        <a href="#" style="--color:#FF0050"><i class="fa-brands fa-youtube"></i> </a>
-        <a href="#" style="--color:#E1306C"><i class="fa-brands fa-instagram-square"></i> </a>
-        <a href="#" style="--color:#0072b1"><i class="fa-brands fa-linkedin-in"></i> </a>
+        <a href="https://www.youtube.com/@pildorasinformaticas" style="--color:#FF0050"><i class="fa-brands fa-youtube"></i> </a>
+        <a href="https://www.linkedin.com/in/nicol%C3%A1s-cugno-8b692b1bb?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByV9FHNp5Tgazmvw7B8Cr8g%3D%3D" target="_blank"" style="--color:#0072b1"><i class="fa-brands fa-linkedin-in"></i> </a>
+        <a href="https://www.instagram.com/nico.cugno/" target="_blank" style="--color:#E1306C"><i class="fa-brands fa-instagram-square"></i> </a>
     </section>
 
 
@@ -35,11 +53,17 @@
 
 
             <!--FOOTER-->
-    <footer>
-        <p>Todos los derechos reservados - 2023</p>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by NicoCugno</p>
+        </div>
+        <div class="icon-subir">
+            <a href="#">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
