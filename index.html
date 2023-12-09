@@ -10,6 +10,7 @@
     />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="icon" href="./img/logo.ico">
   <title>NC</title>
 </head>
@@ -31,7 +32,7 @@
           <div class="fa-solid fa-bars" id="menu"></div>
         </header>
 
-<!--Seccion inicio-->
+      <!--Seccion inicio-->
 
         <section class="inicio" id="inicio">
           <div class="contenido-inicio">
@@ -82,6 +83,7 @@
         </section>
 
     <!--Parte de Sobre Mi-->
+
       <section id="quien-soy">
         <div class="fotoMia">
           <img src="img/me.jpg" alt="Foto del Programador">
@@ -92,14 +94,12 @@
           <h3 class>Programador</h3>
 
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            0 Nisi iste, veritatis minus laborum nostrum eligendi, 
-            Blanditiis voluptate inventore officiis cupiditate quisquam? 
-            Fugit, laboriosam!
+            Estoy estudiando Ingeniería en Sistemas en la Universidad Tecnológica Nacional (Córdoba, Argentina). Soy una persona proactiva a la que le encanta aprender cosas nuevas y ponerlas en práctica 💡. Me encanta explorar nuevas tecnologías y aprovecharlas para resolver problemas de la vida real ✨.
           </p>
         </div>
       </section>
 
+      <!--Servicios-->
 
       <section class="servicios" id="servicios">
         <h2 class="titulo-servicio">Mis <span>Servicios</span></h2>
@@ -113,7 +113,7 @@
               Con nuestra experiencia avanzada, no solo protege, 
               sino que se asocia estratégicamente para salvaguardar sus activos digitales.</p>
 
-            <a href="pages/Contacto.html" class="boton">Contactame</a>
+            <a href="pages/Servicios.html" class="boton">Ver Detalles</a>
           </div>
 
           <div class="servicios-box">
@@ -126,7 +126,7 @@
               Únase a nosotros para una colaboración que convierte desafíos en oportunidades tecnológicas.
             </p>
 
-            <a href="pages/Contacto.html" class="boton">Contactame</a>
+            <a href="pages/Servicios.html" class="boton">Ver Detalles</a>
           </div>
           
           <div class="servicios-box">
@@ -138,13 +138,46 @@
               Ofrecemos experiencia y un enfoque personalizado. Colaboramos estrechamente para identificar oportunidades de crecimiento y trazar un camino hacia el éxito. 
             
             </p>
-            <a href="pages/Contacto.html" class="boton">Contactame</a>
+            <a href="pages/Servicios.html" class="boton">Ver Detalles</a>
 
           </div>
         </div>
-
       </section>
 
+      <!--Testimonios-->
+
+      <div class="testimonio-contenedor">
+        <h2 class="span-title">Testimonios Recientes</h2>
+
+        <div class="testimonios-caja">
+          <div class="testimonios-box mySwiper">
+            <div class="testimonio swiper-wrapper">
+
+              <div class="testimonio-slide swiper-slide">
+                <img src="img/imgperfil.png" alt="Imagen de perfil Vaca">
+                <h3>Catalina Fitó</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem, illo neque animi dolorum minus non dolor, magni modi natus quos voluptatibus consequatur, excepturi eaque repudiandae error provident dignissimos! Et.</p>
+              </div>
+
+              <div class="testimonio-slide swiper-slide">
+                <img src="img/imgperfil.png" alt="Imagen de perfil Vaca">
+                <h3>Francisco Parmigiani</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem, illo neque animi dolorum minus non dolor, magni modi natus quos voluptatibus consequatur, excepturi eaque repudiandae error provident dignissimos! Et.</p>
+              </div>
+
+              <div class="testimonio-slide swiper-slide">
+                <img src="img/imgperfil.png" alt="Imagen de perfil Vaca">
+                <h3>Marco Huk</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem, illo neque animi dolorum minus non dolor, magni modi natus quos voluptatibus consequatur, excepturi eaque repudiandae error provident dignissimos! Et.</p>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
 
       <!--FOOTER-->
       <footer class="footer">
@@ -158,7 +191,9 @@
         </div>
       </footer>
 
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <script src="js/script.js"></script>
+      
     </body>
 </html>

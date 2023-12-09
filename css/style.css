@@ -348,7 +348,7 @@ section{
 }
 
 #quien-soy .quien-soy p {
-  font-size: 25px;
+  font-size: 15px;
   line-height: 25px;
   color: var(--text-color);
   margin-bottom: 12px;
@@ -358,6 +358,12 @@ section{
 
 /*SECTION DE SERVICIOS*/
 
+
+.servicios{
+  min-height: 80vh;
+  margin-bottom: 0;
+  padding: 0 7% 0;
+}
 .titulo-servicio{
   font-size: 40px;
   font-weight: bold;
@@ -375,7 +381,6 @@ section{
 .servicios-container{
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
   flex-flow: wrap;
   gap: 2rem;
 
@@ -424,6 +429,91 @@ section{
 }
 
 /*SECTION DE RECOMENDACIONES*/
+
+.testimonio-contenedor{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 1rem;
+  margin-top: 0;
+  margin-bottom: 20rem;
+}
+
+.testimonio-contenedor .testimonios-caja{
+  
+  position: relative;
+  max-width: 90rem;
+  width: 100%;
+  padding: 5rem;
+}
+
+.testimonios-caja .testimonios-box{
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.testimonio-contenedor .testimonio-slide{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  border-radius: 2rem;
+  box-shadow: 0 .1em .5rem var(--shadow-color);
+  padding: 3em 5rem;
+  border-top: .8rem solid var(--main-color);
+  border-bottom: .8rem solid var(--main-color);
+
+}
+.testimonio-slide img{
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: .5rem solid var(--main-color);
+}
+
+.testimonio-slide h3{
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+
+.testimonio-slide p{
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+
+
+.testimonios-box .swiper-button-next,
+.testimonios-box .swiper-button-prev {
+  color: var(--main-color);
+}
+
+
+.testimonios-box .swiper-button-next{
+  right: 0;
+}
+
+.testimonios-box .swiper-button-prev{
+  left: 0;
+}
+
+.testimonios-box .swiper-pagination-bullet{
+  background: var(--text-color);
+}
+.testimonios-box .swiper-pagination-bullet-active{
+  background: var(--main-color);
+}
+
+
+
+
+
+
+
 
 
 /*---------------------------------------------PAGINA PROYECTOS---------------------------------------------------------*/
@@ -1161,9 +1251,27 @@ section{
   #quien-soy .quien-soy{
     margin: 0;
   }
+
+
+  /*SECCION TESTIMONIOS*/ 
+  .testimonio-contenedor{
+    margin-top: 25rem;
+  }
+  .testimonio-contenedor h2{
+    font-weight: 399;
+  }
 }
 
+@media (min-width:767px){
+  
+  .testimonio-contenedor{
+    margin-top: 25rem;
+  }
 
+  .testimonio-contenedor h2{
+    font-weight: 800;
+  }
+}
 
 
 
